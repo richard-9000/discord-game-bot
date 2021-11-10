@@ -5,7 +5,8 @@ A very simple bot to control games from a discord channel
 
 1. Run
 
-```git clone https://github.com/richard-9000/discord-game-bot
+```
+git clone https://github.com/richard-9000/discord-game-bot
 cd discord-game-bot
 python3 -m venv .
 ```
@@ -14,5 +15,6 @@ python3 -m venv .
 
 3. Run the poker.py
 
-```python3 poker.py
+```
+python3 poker.py
 ```
