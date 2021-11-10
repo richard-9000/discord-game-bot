@@ -1,19 +1,19 @@
 import discord
 
 # Example of running script
-#client = GenericBot("valheimbot.ini")
+#client = GenericBot("poker.ini")
 #client.run(client.config['GAME']['apikey'])
 
 # # example INI file:
 # [GAME]
 # gamename=valheim
 # apikey=<your api key>
-# channels=old-general,beerverse-bots
-# authorized=everyone
+# channels=general,fun
+# authorized=everyone,CoolGuy#1234
 #
 # # Any commands not properly sanitized provide an attack surface.  Use at your own risk!
 # [COMMANDS]
-# status=ps -ef|grep valheim
+# status=ps -ef|grep poker
 # save=echo "save not yet implemented"
 # start=echo "save not yet implemented"
 # stop=echo "save not yet implemented"
