@@ -1,4 +1,5 @@
 import discord
+import os
 
 # Example of running script
 #client = GenericBot("poker.ini")
@@ -32,7 +33,7 @@ class GenericBot(discord.Client):
       self.authorized = { c:True for c in self.config['GAME']['authorized'].split(",") }
       self.gamename = self.config['GAME']['gamename']
       self.commands = dict(self.config.items('COMMANDS'))
-      print([self.commands])
+      print("Discord bot started: " + self.gamename)
       super().__init__()
 
     async def on_ready(self):
@@ -75,10 +76,10 @@ class GenericBot(discord.Client):
 
     def run_cmd(self, cmd):
       import subprocess
-      p = subprocess.Popen(["/bin/sh", "-c", cmd], stdout=subprocess.PIPE)
+
+      p = subprocess.Popen(["/bin/bash", "-c", cmd], stdout=subprocess.PIPE)
       resp = ''
       for line in p.stdout:
           resp += line.decode("utf-8")
-      p.wait()
       return resp
 

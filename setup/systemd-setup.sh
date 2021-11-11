@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 die_usage() {
 cat <<EOF
-Usage: systemd-setup.sh <gamename> <gamedir> <user>
+Usage: systemd-setup.sh <gamename> <scriptdir> <user>
 
   ex:
   systemd-setup.sh valheim /home/steam/valheim steam

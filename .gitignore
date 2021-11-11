@@ -7,3 +7,4 @@ pyvenv.cfg
 share/
 valheimbot.ini
 valheimbot.py
+*.pyc
