@@ -1,7 +1,7 @@
 #!/bin/sh
 
 die_usage() {
-echo <<EOF
+cat <<EOF
 Usage: systemd-setup.sh <gamename> <gamedir> <user>
 
   ex:
@@ -13,10 +13,12 @@ EOF
 gamename="$1"
 gamedir="$2"
 user="$3"
-[ "$gamename" == "" ] || [ "$gamedir" == "" ]  || [ "$user" == "" ] || die_usage
+[ "$gamename" == "" ] && die_usage
+[ "$gamedir" == "" ]  && die_usage
+[ "$user" == "" ] && die_usage
 
 (
-echo <<EOF
+cat <<EOF
 [Unit]
 Description=Discord Game Bot - $gamedir
 After=network.target
@@ -27,7 +29,8 @@ Type=simple
 Restart=always
 RestartSec=10
 User=$user
-ExecStart=/usr/bin/env python3 "$gamedir/discordbot/$gamename.py"
+WorkingDirectory=$gamedir
+ExecStart=/usr/bin/env bash -c 'source bin/activate; python "$gamedir/$gamename.py"'
 
 [Install]
 WantedBy=multi-user.target
