@@ -50,9 +50,12 @@ class GenericBot(discord.Client):
       print('Message from {0.author}: {0.content} - "{0.channel.name}"'.format(message))
 
       # Help
-      if (message.content.startswith('!help')):
-        resp = "Here are a list of my commands: {0.author}".format(message) + "\n\n"
-        resp += "!ping\n!help\n"
+      if (message.content.startswith("!help")):
+        resp = "Hey, {0.author}, try using !{1}-help".format(message, self.gamename) + "\n\n"
+        await channel.send(resp)
+      if (message.content.startswith("!"+self.gamename+"-help")):
+        resp = "Hey, {0.author}, Here are the list of commands I know for {1}:".format(message, self.gamename) + "\n\n"
+        resp += "!{0}-ping\n!{0}-help\n".format(self.gamename)
         for cmd in self.commands:
           resp += "!"+self.gamename+"-"+cmd+"\n"
         await channel.send(resp)
