@@ -3,7 +3,7 @@ A very simple bot that runs on the game server allowing controls from a discord 
 
 ## Game Bot in Action
 
-![image](https://user-images.githubusercontent.com/53876487/142502055-6f972eb8-6a1f-4e57-a840-e34ef7753062.png)
+![image](https://user-images.githubusercontent.com/53876487/142502375-61df86f2-6f03-41a3-88a0-ba3316656fd9.png)
 
 A simple Valheim and "Poker" configuration and scripts are provided now, with more to come.
 
