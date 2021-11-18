@@ -16,5 +16,12 @@ python3 -m venv .
 3. Run the poker.py
 
 ```
-python3 poker.py
+source bin/activate; python poker.py
+```
+
+4. Optional: set up a systemd service:
+
+```
+source bin/activate; python poker.py
+scripts/systemd-setup.sh poker `pwd` steam
 ```
