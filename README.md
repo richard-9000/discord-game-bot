@@ -43,7 +43,7 @@ cp poker.py  mygame.py
 
 2.  Edit mygame.ini and change/add commands to suit your games needs.
 
-Note that additional commands can be added to the COMMANDS section by choosing a key name.  Removing a command from the commands section will disable it.
+Note that additional commands can be added to the COMMANDS section by choosing new unique key name.  Removing a command from the commands section will disable it.
 
 ```
 # General options
