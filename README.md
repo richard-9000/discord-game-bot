@@ -25,3 +25,32 @@ source bin/activate; python poker.py
 source bin/activate; python poker.py
 scripts/systemd-setup.sh poker `pwd` steam
 ```
+
+## Quick and simple install:
+
+1. To customize for a new game, you must at least make copies of two files:
+
+```
+cp poker.ini mygame.ini
+cp poker.py  mygame.py
+```
+
+2.  Edit mygame.ini and change/add commands to suit your games needs.
+
+Note that additional commands can be added to the COMMANDS section by choosing a key name.  Removing a command from the commands section will disable it.
+
+```
+# General options
+[GAME]
+gamename=mygame
+apikey=<your API key here>
+channels=general,fun
+authorized=GameLover#2021,everyone
+
+# Any commands not properly sanitized provide an attack surface.  Use at your own risk!
+[COMMANDS]
+status=ps -ef|grep mygame
+start=gamescripts/mygame/start.sh
+stop=gamescripts/mygame/stop.sh
+update=gamescripts/mygame/update.sh
+```
