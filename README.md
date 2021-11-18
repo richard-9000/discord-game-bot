@@ -1,5 +1,11 @@
 # discord-game-bot
-A very simple bot to control games from a discord channel
+A very simple bot that runs on the game server allowing controls from a discord channel
+
+## Game Bot in Action
+
+![image](https://user-images.githubusercontent.com/53876487/142502055-6f972eb8-6a1f-4e57-a840-e34ef7753062.png)
+
+A simple Valheim and "Poker" configuration and scripts are provided now, with more to come.
 
 ## Quick and simple install:
 
