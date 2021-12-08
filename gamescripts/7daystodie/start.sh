@@ -7,7 +7,7 @@ if [ "$isrunning" != "" ]; then
 fi
 
 ( 
-  cd /home/steam/steamcmd/7daysded && nohup ./startserver.sh configfile=serverconfig.xml >/dev/null & 
+  cd /home/steam/steamcmd/7daysded && nohup ./startserver.sh -configfile=serverconfig.xml >/dev/null & 
   disown 
 ) >/dev/null; 
 
