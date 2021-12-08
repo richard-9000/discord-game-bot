@@ -29,7 +29,7 @@ source bin/activate; python poker.py
 4. Optional: set up a systemd service:
 
 ```
-scripts/systemd-setup.sh poker `pwd` steam
+setup/systemd-setup.sh poker `pwd` steam
 ```
 Your server is now running and will restart on reboot.
 
