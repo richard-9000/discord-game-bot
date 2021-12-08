@@ -15,6 +15,7 @@ A simple Valheim and "Poker" configuration and scripts are provided now, with mo
 git clone https://github.com/richard-9000/discord-game-bot
 cd discord-game-bot
 python3 -m venv .
+pip3 install discord
 ```
 
 2. Edit the poker.ini to add your API key
