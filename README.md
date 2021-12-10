@@ -33,7 +33,7 @@ setup/systemd-setup.sh poker `pwd` steam
 ```
 Your server is now running and will restart on reboot.
 
-## Quick and simple install:
+## Customizing the Bot:
 
 1. To customize for a new game, you must at least make copies of two files:
 
